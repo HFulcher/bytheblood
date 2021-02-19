@@ -41,7 +41,17 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    preload: true,
+    display: 'swap',
+    families: {
+      'Libre Baskerville': true,
+      'Open Sans': true
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
