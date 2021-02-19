@@ -2,9 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        ByTheBlood
-      </h1>
+      <h1 class="title">ByTheBlood</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -24,11 +22,31 @@
         </a>
       </div>
     </div>
+    <div>
+      <li v-for="post of posts" :key="post.slug">
+        <NuxtLink :to="post.slug">{{ post.title }}</NuxtLink>
+      </li>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  head() {
+    return {
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+      ],
+    }
+  },
+  async asyncData({ $content }) {
+    const posts = await $content('blog').fetch()
+
+    return {
+      posts,
+    }
+  },
+}
 </script>
 
 <style>
@@ -47,16 +65,8 @@ export default {}
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'ByTheBlood',
+    title: 'By The Blood',
     htmlAttrs: {
       lang: 'en'
     },
