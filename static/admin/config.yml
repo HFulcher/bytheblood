@@ -2,16 +2,23 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: static/img
-public_folder: /img
+publish_mode: editorial_workflow
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: huwfulcher
+    api_key: 476876541331345
+
+site_url: https://bytheblood.faith
 
 collections:
   - name: 'blog'
-    label: 'Blog'
+    label: 'Blog Posts'
+    label_singular: 'Blog Post'
     folder: 'content/blog'
     format: 'frontmatter'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
     editor:
       preview: false
     fields:
@@ -19,3 +26,10 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - {
+          label: 'Cover Image',
+          name: 'image',
+          widget: 'image',
+          required: false,
+        }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
