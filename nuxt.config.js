@@ -15,6 +15,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/icon', href: '/favicon.png' }
+    ],
+    script: [
+      { src: "https://analytics.huwfulcher.com/js/plausible.js", async: true, defer: true, 'data-domain': 'bytheblood.faith' }
     ]
   },
 
