@@ -78,11 +78,10 @@ export default {
     checkImage(image) {
       let image_url
       if (image == null) {
-        image_url =
-          'https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80'
+        image_url = ''
       } else {
         image_url =
-          'https://res.cloudinary.com/huwfulcher/image/upload/v1613862765/ByTheBlood/w_600,h_600,q_auto/' +
+          'https://res.cloudinary.com/huwfulcher/image/upload/w_auto,f_auto,q_auto/v1613862765/ByTheBlood/' +
           image
       }
 
