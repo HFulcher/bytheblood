@@ -10,15 +10,15 @@
         />
       </NuxtLink>
       <NuxtLink
-        class="font-brand text-baseline md:text-xl lg:text-2xl"
+        class="font-brand text-sm md:text-lg lg:text-xl text-brand-foreground transition duration-300 ease-in-out hover:text-black"
         to="/about"
       >
         About
       </NuxtLink>
     </div>
-    <div
+    <!-- <div
       class="self-center w-3/5 border-b border-opacity-50 border-brand-foreground"
-    />
+    /> -->
   </div>
 </template>
 
