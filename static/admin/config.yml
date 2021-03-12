@@ -3,13 +3,13 @@ backend:
   branch: master
 
 publish_mode: editorial_workflow
-media_folder: static/img
 media_library:
   name: cloudinary
   output_filename_only: true
   config:
     cloud_name: huwfulcher
     api_key: 476876541331345
+media_folder: static/img
 
 site_url: https://bytheblood.faith
 
@@ -21,7 +21,6 @@ collections:
     format: 'frontmatter'
     create: true
     slug: '{{slug}}'
-    preview_path: '{{slug}}'
     editor:
       preview: true
     fields:
