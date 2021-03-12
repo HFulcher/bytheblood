@@ -82,7 +82,7 @@ export default {
       } else {
         image_url =
           'https://res.cloudinary.com/huwfulcher/image/upload/w_auto,f_auto,q_auto/v1613862765/ByTheBlood/' +
-          image
+          image.replace('/static/img/', '')
       }
 
       return image_url
